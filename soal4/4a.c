@@ -108,7 +108,8 @@ int main()
     void *k; 
     pthread_join(threads[i], &k); 
 
-    int *p = (int *)k; 
+    int *p = (int *)k;
+    sharedHasil[i+2]=*p;
     printf("%d ",*p); 
     if ((i + 1) % kolom2 == 0) 
       printf("\n"); 
